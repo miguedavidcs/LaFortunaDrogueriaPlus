@@ -1,0 +1,176 @@
+/* General Styles */
+.container-prod {
+   padding: 0px;
+}
+
+.title {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 24px;
+   color: #333;
+}
+
+/* Product Grid Styles */
+.products-container-prod {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   padding: 0;
+   max-width: 800px; 
+   max-height: 800px;
+   justify-content: center;
+   margin: 0 auto; 
+   margin-bottom: 100px;
+}
+
+.product-grid {
+   display: grid;
+   max-width: 1500px; 
+   max-height: 1800px;
+   grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
+   gap: 15px;
+}
+
+/* Product Styles */
+.product {
+   background: #fff;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   text-align: center;
+   transition: transform 0.3s, box-shadow 0.3s;
+   padding: 10px; /* Reduces padding for a smaller product */
+   max-width: 500px; /* Sets a maximum width for each product */
+   max-height: 800px; /* Sets a maximum height for each product */
+   box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.product:hover {
+   transform: scale(1.05);
+   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.product img {
+   width: 100%;
+   height: auto;
+   max-height: 150px; /* Limits the height of the image to make the product smaller */
+   object-fit: cover; /* Ensures the image covers the area without distortion */
+   display: block;
+}
+
+.product h3 {
+   margin: 10px 0;
+   font-size: 16px;
+   color: #333;
+}
+
+.price {
+   font-size: 14px;
+   color: #555;
+   margin-bottom: 10px;
+}
+
+
+
+/* Preview Modal Styles */
+.preview {
+   position: fixed;
+   top: 50%; 
+   left: 50%; 
+   transform: translate(-50%, -50%); /* Centra el modal */
+   width: 500px;
+   height: 500px;
+   background: rgba(0, 0, 0, 0.8);
+   color: #fff;
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+   padding: 20px;
+   box-sizing: border-box;
+   border-radius: 8px;
+}
+
+.fas.fa-times {
+   position: absolute;
+   top: 10px; /* Ajusta según sea necesario */
+   right: 10px; /* Ajusta según sea necesario */
+   font-size: 24px;
+   cursor: pointer;
+   color: #fff;
+}
+
+
+.preview img {
+   max-width: 80%;
+   height: auto;
+   border-radius: 8px;
+   margin-bottom: 15px;
+}
+
+.preview h3 {
+   font-size: 22px;
+   margin: 10px 0;
+}
+
+.stars {
+   margin: 10px 0;
+}
+
+.stars i {
+   color: #ffd700;
+}
+
+.stars span {
+   margin-left: 5px;
+   font-size: 14px;
+}
+
+.preview p {
+   text-align: center;
+   max-width: 90%;
+   margin-bottom: 20px;
+}
+
+.buttons a {
+   display: inline-block;
+   background: #f0c14b;
+   color: #333;
+   padding: 10px 20px;
+   margin: 5px;
+   text-decoration: none;
+   border-radius: 4px;
+   transition: background 0.3s;
+}
+
+.buttons a:hover {
+   background: #e6b840;
+}
+
+.fas.fa-times {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   font-size: 24px;
+   cursor: pointer;
+   color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .products-container-prod {
+       max-width: 100%; /* Ajusta el ancho máximo para dispositivos móviles */
+   }
+}
+
+@media (max-width: 380px) {
+   .products-container-prod  {
+      grid-template-columns: repeat(2, 1fr); /* 1 column for mobile */
+   }
+
+   .preview img {
+       max-width: 100%; /* Ensure images fit the screen on small devices */
+   }
+}

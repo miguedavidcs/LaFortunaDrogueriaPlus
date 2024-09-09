@@ -1,0 +1,106 @@
+#home {
+    text-align: center;
+    padding: 0; /* Ajusta el padding según sea necesario */
+    color: #fff;
+}
+
+#home h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-home {
+    background-color: #a6ce38;
+}
+
+.btn-home:hover {
+    background-color: #8ccf27;
+}
+
+
+/* Estilo general para el slider de marcas */
+#main-marcas {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    height: 380px; /* Asegúrate de que la altura coincida con la altura de tus imágenes */
+}
+
+.main-marcas-container {
+    display: flex;
+    transition: transform 2s ease;
+    width: 100%; 
+    height: 90%;
+    animation: slide 9s infinite; /* Ajusta la duración y el número de repeticiones según sea necesario */
+}
+
+.main-marcas-item {
+    flex: 0 0 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Aquí defines cada imagen de fondo específica para cada item */
+.main-marcas-item:nth-child(1) {
+    background-image: url('../img/nestogeno.jpg');
+}
+
+.main-marcas-item:nth-child(2) {
+    background-image: url('../img/electrolit.png');
+}
+
+.main-marcas-item:nth-child(3) {
+    background-image: url('../img/neutrogena.jpg');
+}
+
+/* Agrega una animación para el slider */
+@keyframes slide {
+    0%, 20% { transform: translateX(0); }   /* Pausa en la primera imagen */
+    33%, 53% { transform: translateX(-100%); } /* Mueve a la segunda imagen y pausa */
+    66%, 86% { transform: translateX(-200%); } /* Mueve a la tercera imagen y pausa */
+    100% { transform: translateX(0); } /* Regresa a la primera imagen */
+}
+
+.main-marcas-item:nth-child(3) {
+    background-image: url('../img/neutrogena.jpg');
+}
+
+/* Estilo para los botones de navegación */
+.main-marcas-navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-button {
+    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+    background-color: #005aaa;
+    color: #fefefe;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #003d82;
+}
+
+figcaption {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}

@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+    color: #333333;
+    line-height: 3;
+}
+
+section {
+    padding: 0; /* Ajusta el padding según sea necesario */
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2 {
+    color: #005aaa;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#about {
+  padding: 40px;
+  background: #f9f9f9; /* Light grey background for the section */
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Layout for the row and columns */
+.row {
+  margin: 0 -10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align the columns */
+}
+
+.column {
+  flex: 1;
+  max-width: 25%;
+  padding: 0 10px;
+}
+
+/* Style the cards */
+.card {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Blue gradient */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  color: #444;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+  margin: 0;
+}
+
+.card .fa {
+  font-size: 50px;
+  color: #4CAF50; /* Soft green color */
+}
+
+.card h3 {
+  font-size: 2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.card p:last-of-type {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Button style */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049; /* Darker green */
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}

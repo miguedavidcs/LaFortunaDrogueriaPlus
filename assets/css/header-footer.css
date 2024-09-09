@@ -1,0 +1,245 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: #005aaa;
+    color: #fefefe;
+    padding: 5px; /* Ajusta el padding según sea necesario */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    display: block;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    display: none;
+    color: #a6ce38;
+    margin-left: 10px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fefefe;
+    margin: 5px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #005aaa;
+    padding: 0; /* Ajusta el padding según sea necesario */
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    border-radius: 0px;
+    text-align: center;
+    width: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #1bd52b;
+    transform: scale(1.05);
+    border-radius: 0;
+    
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background-color: #005aaa;
+        box-shadow: none;
+        justify-content: center;
+    }
+    .menu a {
+        padding: 0; /* Ajusta el padding según sea necesario */
+        color: #fefefe;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        display: none;
+    }
+    .logo-text {
+        display: block;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #005aaa;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 1000;
+    }
+    .menu.show {
+        display: flex;
+    }
+    .menu a {
+        width: 100%;
+        text-align: center;
+        padding: 0; /* Ajusta el padding según sea necesario */
+        color: #000;
+        background-color: #0b429b57;
+        border: none;
+    }
+    .menu a:hover {
+        color: #fff;
+        background-color: #8ccf27;
+        transform: scale(1.05);
+    }
+}
+
+footer {
+    background-color: #005aaa;
+    color: #fefefe;
+    padding: 0; /* Ajusta el padding según sea necesario */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: #005aaa;
+    color: #fefefe;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #a6ce38;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fefefe;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #a6ce38;
+}
+
+.footer-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.footer-section form button {
+    padding: 10px;
+    background-color: #a6ce38;
+    color: #005aaa;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section form button:hover {
+    background-color: #8ccf27;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #003d82;
+    color: #ddd;
+    border-top: 1px solid #888;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
